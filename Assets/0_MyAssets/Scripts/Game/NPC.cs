@@ -8,9 +8,21 @@ public class NPC : MonoBehaviour
     public void OnAwake()
     {
         character.onStart = OnStart;
+        character.onUpdate = OnUpdate;
+        character.onFixedUpdate = OnFixedUpdate;
     }
 
     void OnStart()
+    {
+
+    }
+
+    void OnUpdate()
+    {
+
+    }
+
+    void OnFixedUpdate()
     {
 
     }

@@ -12,6 +12,8 @@ public class Character : MonoBehaviour
     public NPC nPC;
     float walkSpeed = 10f;
     public UnityAction onStart = () => { };
+    public UnityAction onUpdate = () => { };
+    public UnityAction onFixedUpdate = () => { };
 
     private void Awake()
     {
@@ -36,12 +38,13 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-
+        onUpdate();
     }
 
     private void FixedUpdate()
     {
         animator.SetBool("IsRun", rb.velocity.sqrMagnitude > 0);
+        onFixedUpdate();
     }
 
     public void Walk(Vector3 direction)

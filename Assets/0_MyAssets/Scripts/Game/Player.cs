@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     {
         joystick = FindObjectOfType<Joystick>();
         character.onStart = OnStart;
+        character.onUpdate = OnUpdate;
+        character.onFixedUpdate = OnFixedUpdate;
     }
 
     void OnStart()
@@ -19,13 +21,13 @@ public class Player : MonoBehaviour
 
     }
 
-    void Update()
+    void OnUpdate()
     {
         dir.x = joystick.Horizontal;
         dir.z = joystick.Vertical;
     }
 
-    private void FixedUpdate()
+    void OnFixedUpdate()
     {
         character.Walk(dir);
     }
