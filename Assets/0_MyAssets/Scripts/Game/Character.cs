@@ -6,6 +6,7 @@ public class Character : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
     [SerializeField] bool isPlayer;
+    [SerializeField] Animator animator;
     public Player player;
     public NPC nPC;
     float walkSpeed = 7f;
@@ -37,7 +38,7 @@ public class Character : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        animator.SetBool("IsRun", rb.velocity.sqrMagnitude > 0);
     }
 
     public void Walk(Vector3 direction)
