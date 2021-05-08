@@ -80,6 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1037857235742334916}
   isPlayer: 0
+  animator: {fileID: 5578558072927764101}
   player: {fileID: 2753542236670063128}
   nPC: {fileID: 9065826197282165355}
 --- !u!114 &2753542236670063128
@@ -168,5 +169,10 @@ PrefabInstance:
 --- !u!4 &5578558072917971277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4831290010429273944, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
+  m_PrefabInstance: {fileID: 1037857234965390869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5578558072927764101 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4831290010421516432, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
   m_PrefabInstance: {fileID: 1037857234965390869}
   m_PrefabAsset: {fileID: 0}

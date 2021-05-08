@@ -9,7 +9,7 @@ public class Character : MonoBehaviour
     [SerializeField] Animator animator;
     public Player player;
     public NPC nPC;
-    float walkSpeed = 7f;
+    float walkSpeed = 10f;
 
     private void Awake()
     {
