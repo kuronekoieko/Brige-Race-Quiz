@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Zenject;
 
 public class CameraController : MonoBehaviour
 {
     Vector3 offset;
-    Player player;
+    [Inject] Player player;
 
     public void OnStart()
     {

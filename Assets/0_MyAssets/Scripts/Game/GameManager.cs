@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
+using Zenject;
 
 public class GameManager : MonoBehaviour
 {
+    [Inject] CameraController cameraController;
+
     private void Awake()
     {
 
@@ -12,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-
+        cameraController.OnStart();
     }
 
     private void Update()
