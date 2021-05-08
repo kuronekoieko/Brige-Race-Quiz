@@ -8,7 +8,7 @@ public class Character : MonoBehaviour
     [SerializeField] bool isPlayer;
     public Player player;
     public NPC nPC;
-
+    float walkSpeed = 5f;
 
     private void Awake()
     {
@@ -45,6 +45,7 @@ public class Character : MonoBehaviour
         var vel = rb.velocity;
         vel.x = direction.normalized.x;
         vel.z = direction.normalized.z;
-        rb.velocity = vel;
+        rb.velocity = vel * walkSpeed;
+        if (direction.sqrMagnitude > 0.01f) transform.forward = direction;
     }
 }

@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    Joystick joystick;
+    Vector3 dir;
+    public Character character;
+
+    private void Awake()
+    {
+        joystick = FindObjectOfType<Joystick>();
+    }
 
     public void OnStart()
     {
@@ -13,6 +21,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        dir.x = joystick.Horizontal;
+        dir.z = joystick.Vertical;
+    }
 
+    private void FixedUpdate()
+    {
+        character.Walk(dir);
     }
 }

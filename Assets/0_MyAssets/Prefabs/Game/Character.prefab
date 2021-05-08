@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4a50d4cc9f947d4815d9104a1c61f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 2522742228977808374}
 --- !u!114 &9065826197282165355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75533f97be8842d0a2a542ada7f132a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 2522742228977808374}
 --- !u!1001 &1037857234965390869
 PrefabInstance:
   m_ObjectHideFlags: 0

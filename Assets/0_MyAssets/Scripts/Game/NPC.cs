@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-    
+    public Character character;
     public void OnStart()
     {
 
     }
 
-   
+
 }
