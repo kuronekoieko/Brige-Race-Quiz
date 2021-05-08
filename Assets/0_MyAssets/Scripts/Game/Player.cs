@@ -8,16 +8,16 @@ public class Player : MonoBehaviour
     Vector3 dir;
     public Character character;
 
-    private void Awake()
+    public void OnAwake()
     {
         joystick = FindObjectOfType<Joystick>();
+        character.onStart = OnStart;
     }
 
-    public void OnStart()
+    void OnStart()
     {
 
     }
-
 
     void Update()
     {

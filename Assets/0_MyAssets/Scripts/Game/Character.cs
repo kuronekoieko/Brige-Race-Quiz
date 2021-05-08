@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Character : MonoBehaviour
 {
@@ -10,24 +11,26 @@ public class Character : MonoBehaviour
     public Player player;
     public NPC nPC;
     float walkSpeed = 10f;
+    public UnityAction onStart = () => { };
 
     private void Awake()
     {
         if (isPlayer)
         {
             DestroyImmediate(nPC);
+            player.OnAwake();
         }
         else
         {
             DestroyImmediate(player);
+            nPC.OnAwake();
         }
     }
 
 
     void Start()
     {
-        if (player) player.OnStart();
-        if (nPC) nPC.OnStart();
+        onStart();
     }
 
 

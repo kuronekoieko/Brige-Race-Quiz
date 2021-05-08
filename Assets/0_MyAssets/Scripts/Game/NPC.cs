@@ -5,10 +5,13 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     public Character character;
-    public void OnStart()
+    public void OnAwake()
+    {
+        character.onStart = OnStart;
+    }
+
+    void OnStart()
     {
 
     }
-
-
 }
