@@ -86,22 +86,24 @@ public class Character : MonoBehaviour
         vel.z = direction.normalized.z;
         rb.velocity = vel * walkSpeed;
 
-        if (direction.sqrMagnitude < 0.001f)
-        {
-            rb.angularVelocity = Vector3.zero;
-            return;
-        }
-        float dot = Vector3.Dot(direction.normalized, transform.forward);
+        if (direction.sqrMagnitude > 0.1f) transform.forward = direction;
 
-        // 左側なら正、右側なら負
-        float angularDirection = Mathf.Sign(Vector3.Cross(transform.forward, direction.normalized).y);
-        if (Mathf.Abs(dot) < 0.99f)
-        {
-            rb.angularVelocity = Vector3.up * 10f * angularDirection;
-        }
-        else
-        {
-            rb.angularVelocity = Vector3.zero;
-        }
+        /*if (direction.sqrMagnitude < 0.001f)
+                {
+                    rb.angularVelocity = Vector3.zero;
+                    return;
+                }
+                float dot = Vector3.Dot(direction.normalized, transform.forward);
+
+                // 左側なら正、右側なら負
+                float angularDirection = Mathf.Sign(Vector3.Cross(transform.forward, direction.normalized).y);
+                if (Mathf.Abs(dot) < 0.99f)
+                {
+                    rb.angularVelocity = Vector3.up * 10f * angularDirection;
+                }
+                else
+                {
+                    rb.angularVelocity = Vector3.zero;
+                }*/
     }
 }

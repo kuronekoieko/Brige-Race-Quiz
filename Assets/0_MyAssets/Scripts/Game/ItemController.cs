@@ -16,11 +16,6 @@ public class ItemController : MonoBehaviour
         col = GetComponent<Collider>();
     }
 
-    void Start()
-    {
-
-    }
-
 
     public void OnOwned()
     {
