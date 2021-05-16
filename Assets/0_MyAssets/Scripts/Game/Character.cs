@@ -9,12 +9,14 @@ public class Character : MonoBehaviour
     [SerializeField] bool isPlayer;
     [SerializeField] Animator animator;
     [SerializeField] Transform cartTf;
+    [SerializeField] Transform itemPosTf;
     public Player player;
     public NPC nPC;
     float walkSpeed = 10f;
     public UnityAction onStart = () => { };
     public UnityAction onUpdate = () => { };
     public UnityAction onFixedUpdate = () => { };
+    ItemController ownItem;
 
     private void Awake()
     {
@@ -47,6 +49,34 @@ public class Character : MonoBehaviour
     {
         animator.SetBool("IsRun", rb.velocity.sqrMagnitude > 0);
         onFixedUpdate();
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        HitItem(other);
+    }
+
+    void HitItem(Collision other)
+    {
+        var item = other.gameObject.GetComponent<ItemController>();
+        if (item == null) return;
+        if (ownItem) return;
+        if (item.owner) return;
+        ownItem = item;
+        ownItem.owner = this;
+        ownItem.transform.position = itemPosTf.position;
+        ownItem.transform.parent = transform;
+        ownItem.OnOwned();
+    }
+
+    public void ReleaseItem()
+    {
+        if (!ownItem) return;
+        ownItem.Release();
+        ownItem.owner = null;
+        ownItem.transform.parent = null;
+        ownItem = null;
+
     }
 
     public void Walk(Vector3 direction)

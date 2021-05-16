@@ -25,6 +25,11 @@ public class Player : MonoBehaviour
     {
         dir.x = joystick.Horizontal;
         dir.z = joystick.Vertical;
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            character.ReleaseItem();
+        }
     }
 
     void OnFixedUpdate()
