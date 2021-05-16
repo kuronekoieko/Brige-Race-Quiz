@@ -22,7 +22,7 @@ public class Character : MonoBehaviour
     public NPC nPC;
     [SerializeField] bool isPlayer;
     public CharacterType characterType;
-    float walkSpeed = 10f;
+    [System.NonSerialized] public float walkSpeed = 10f;
     public UnityAction onStart = () => { };
     public UnityAction onUpdate = () => { };
     public UnityAction onFixedUpdate = () => { };

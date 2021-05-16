@@ -1885,7 +1885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5179563424480147830, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
       propertyPath: itemPrefabs.Array.size
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5179563424480147830, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
       propertyPath: itemPrefabs.Array.data[0]
@@ -1918,19 +1918,19 @@ PrefabInstance:
     - target: {fileID: 5179563424480147830, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
       propertyPath: itemPrefabs.Array.data[7]
       value: 
-      objectReference: {fileID: 1617945912294493747, guid: e079a7e6f7ac15042b33f5916f56db25, type: 3}
+      objectReference: {fileID: 3399806236326632979, guid: 38029cced38e75142a3265abfc57248a, type: 3}
     - target: {fileID: 5179563424480147830, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
       propertyPath: itemPrefabs.Array.data[8]
       value: 
-      objectReference: {fileID: 3399806236326632979, guid: 38029cced38e75142a3265abfc57248a, type: 3}
+      objectReference: {fileID: 5527358392447294586, guid: 0158ac3401d3d044287fde902f9263d4, type: 3}
     - target: {fileID: 5179563424480147830, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
       propertyPath: itemPrefabs.Array.data[9]
       value: 
-      objectReference: {fileID: 5527358392447294586, guid: 0158ac3401d3d044287fde902f9263d4, type: 3}
+      objectReference: {fileID: 6606016325876860991, guid: eff6819c8aadc7e48842fe75245c917b, type: 3}
     - target: {fileID: 5179563424480147830, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
       propertyPath: itemPrefabs.Array.data[10]
       value: 
-      objectReference: {fileID: 6606016325876860991, guid: eff6819c8aadc7e48842fe75245c917b, type: 3}
+      objectReference: {fileID: 2832558775752810387, guid: 912153fa6ee4fda4c8fb442714b32812, type: 3}
     - target: {fileID: 5179563424480147830, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
       propertyPath: itemPrefabs.Array.data[11]
       value: 
