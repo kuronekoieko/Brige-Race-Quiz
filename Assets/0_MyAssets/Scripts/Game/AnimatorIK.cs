@@ -6,7 +6,7 @@ public class AnimatorIK : MonoBehaviour
 {
     [SerializeField] Transform leftHandTransform;
     [SerializeField] Transform rightHandTransform;
-    // [SerializeField] Transform targetPosTf;
+    [SerializeField] Transform targetPosTf;
     private Animator animator;
 
     private void Awake()
@@ -30,13 +30,11 @@ public class AnimatorIK : MonoBehaviour
             animator.SetIKRotation(AvatarIKGoal.LeftHand, leftHandTransform.rotation);
         }
 
-        /* //注視方向
-                if (targetPosTf)
-                {
-                    animator.SetLookAtWeight(1.0f, 1f, 1.0f, 0.0f, 0f);
-                    animator.SetLookAtPosition(targetPosTf.position);
-                }*/
-
-
+        //注視方向
+        if (targetPosTf)
+        {
+            animator.SetLookAtWeight(1.0f, 1f, 1.0f, 0.0f, 0f);
+            animator.SetLookAtPosition(targetPosTf.position);
+        }
     }
 }

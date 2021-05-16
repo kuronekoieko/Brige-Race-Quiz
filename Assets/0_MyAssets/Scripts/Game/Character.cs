@@ -15,6 +15,7 @@ public class Character : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
     [SerializeField] Animator animator;
+    [SerializeField] AnimatorIK animatorIK;
     [SerializeField] Transform cartTf;
     [SerializeField] Transform itemPosTf;
     public Player player;
@@ -46,6 +47,7 @@ public class Character : MonoBehaviour
     {
         onStart();
         cartTf.parent = null;
+        animatorIK.enabled = false;
     }
 
 
@@ -76,6 +78,7 @@ public class Character : MonoBehaviour
         ownItem.transform.position = itemPosTf.position;
         ownItem.transform.parent = transform;
         ownItem.OnOwned();
+        animatorIK.enabled = true;
     }
 
     public void ReleaseItem()
@@ -85,7 +88,7 @@ public class Character : MonoBehaviour
         ownItem.owner = null;
         ownItem.transform.parent = null;
         ownItem = null;
-
+        animatorIK.enabled = false;
     }
 
     public void Walk(Vector3 direction)
