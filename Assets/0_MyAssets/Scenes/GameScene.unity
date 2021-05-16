@@ -1863,9 +1863,29 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 619330397}
+    - target: {fileID: 5179563423889333205, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fe52befd49e694e8e8c1499008ac6ab5, type: 3}
+    - target: {fileID: 5179563423889333206, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.91103756
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179563423889333206, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.91103756
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179563423889333206, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.91103756
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179563423889333206, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.31
+      objectReference: {fileID: 0}
     - target: {fileID: 5179563424480147830, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
       propertyPath: itemPrefabs.Array.size
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5179563424480147830, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
       propertyPath: itemPrefabs.Array.data[0]
@@ -1911,6 +1931,14 @@ PrefabInstance:
       propertyPath: itemPrefabs.Array.data[10]
       value: 
       objectReference: {fileID: 6606016325876860991, guid: eff6819c8aadc7e48842fe75245c917b, type: 3}
+    - target: {fileID: 5179563424480147830, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
+      propertyPath: itemPrefabs.Array.data[11]
+      value: 
+      objectReference: {fileID: 2832558775752810387, guid: 912153fa6ee4fda4c8fb442714b32812, type: 3}
+    - target: {fileID: 5179563424480147830, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
+      propertyPath: itemPrefabs.Array.data[12]
+      value: 
+      objectReference: {fileID: 2832558775752810387, guid: 912153fa6ee4fda4c8fb442714b32812, type: 3}
     - target: {fileID: 5532026885845124132, guid: 7aaccdb59d8f2423581aae1b65fd68bc, type: 3}
       propertyPath: m_Mesh
       value: 
