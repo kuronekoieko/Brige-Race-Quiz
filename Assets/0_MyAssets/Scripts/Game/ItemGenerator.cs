@@ -21,7 +21,7 @@ public class ItemGenerator : MonoBehaviour
         }
     }
 
-    public void OnStart()
+    public void Start()
     {
         for (int i = 0; i < itemControllers.Length; i++)
         {
@@ -29,7 +29,7 @@ public class ItemGenerator : MonoBehaviour
             pos.x = Random.Range(-5f, 5f);
             pos.y = Random.Range(5f, 10f);
             pos.z = Random.Range(-5f, 5f);
-            itemControllers[i].transform.position = pos;
+            itemControllers[i].transform.position = transform.position + pos;
         }
     }
 }
