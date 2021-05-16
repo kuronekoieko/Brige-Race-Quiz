@@ -7,6 +7,7 @@ public class ItemGenerator : MonoBehaviour
     [SerializeField] ItemController[] itemPrefabs;
     ItemController[] itemControllers;
     readonly int itemCount = 50;
+    bool isAppeared;
 
     private void Awake()
     {
@@ -16,12 +17,18 @@ public class ItemGenerator : MonoBehaviour
         {
             ItemController itemPrefab = itemPrefabs[itemPrefabIndex];
             itemControllers[i] = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity, transform);
+            itemControllers[i].gameObject.SetActive(false);
             itemPrefabIndex++;
             if (itemPrefabIndex == itemPrefabs.Length) itemPrefabIndex = 0;
         }
     }
 
     public void Start()
+    {
+
+    }
+
+    void Appear()
     {
         for (int i = 0; i < itemControllers.Length; i++)
         {
@@ -30,6 +37,16 @@ public class ItemGenerator : MonoBehaviour
             pos.y = Random.Range(5f, 10f);
             pos.z = Random.Range(-5f, 5f);
             itemControllers[i].transform.position = transform.position + pos;
+            itemControllers[i].gameObject.SetActive(true);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        var character = other.gameObject.GetComponent<Character>();
+        if (character == null) return;
+        if (isAppeared) return;
+        Appear();
+        isAppeared = true;
     }
 }

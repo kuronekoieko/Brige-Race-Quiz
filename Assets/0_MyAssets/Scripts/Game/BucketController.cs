@@ -8,6 +8,7 @@ public class BucketController : MonoBehaviour
     [SerializeField] BucketCollision bucketCollision;
     [SerializeField] TextMeshPro textMeshPro;
     [SerializeField] BridgeController bridgeController;
+    [SerializeField] ParticleSystem changePS;
     public CharacterType characterType;
     int answerCount
     {
@@ -30,7 +31,7 @@ public class BucketController : MonoBehaviour
 
     void Start()
     {
-
+        changePS.transform.parent = null;
     }
 
     void OnHitItem(ItemController itemController)
@@ -43,6 +44,7 @@ public class BucketController : MonoBehaviour
         {
             gameObject.SetActive(false);
             bridgeController.gameObject.SetActive(true);
+            changePS.Play();
         }
     }
 }

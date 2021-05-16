@@ -1216,6 +1216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5179563424480147831}
   - component: {fileID: 5179563424480147830}
+  - component: {fileID: 9111963949494701992}
   m_Layer: 0
   m_Name: Items
   m_TagString: Untagged
@@ -1262,6 +1263,19 @@ MonoBehaviour:
   - {fileID: 2161893651523828750, guid: abe194bc3f8789e45911104fc705a136, type: 3}
   - {fileID: 2161893651523828750, guid: abe194bc3f8789e45911104fc705a136, type: 3}
   - {fileID: 2161893651523828750, guid: abe194bc3f8789e45911104fc705a136, type: 3}
+--- !u!65 &9111963949494701992
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5179563424480147784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20.995144, y: 1, z: 5.6821547}
+  m_Center: {x: -0.13463783, y: 0, z: -9.247696}
 --- !u!1 &5179563424543014782
 GameObject:
   m_ObjectHideFlags: 0
