@@ -43,9 +43,9 @@ public class ItemGenerator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (isAppeared) return;
         var character = other.gameObject.GetComponent<Character>();
         if (character == null) return;
-        if (isAppeared) return;
         Appear();
         isAppeared = true;
     }
