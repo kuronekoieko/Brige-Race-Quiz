@@ -43,6 +43,5 @@ public class NPC : MonoBehaviour
     {
         targetPos.x = Random.Range(-10f, 10f);
         targetPos.z = Random.Range(-10f, 10f);
-
     }
 }
