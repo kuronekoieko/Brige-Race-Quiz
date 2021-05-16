@@ -32,8 +32,4 @@ public class ItemGenerator : MonoBehaviour
             itemControllers[i].transform.position = pos;
         }
     }
-
-
-
-
 }
