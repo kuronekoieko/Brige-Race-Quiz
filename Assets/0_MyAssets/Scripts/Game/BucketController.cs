@@ -39,7 +39,7 @@ public class BucketController : MonoBehaviour
         itemController.isInBucket = true;
         itemController.transform.parent = transform;
         if (itemController.isAnswer) answerCount++;
-        if (answerCount == 5)
+        if (answerCount == 3)
         {
             gameObject.SetActive(false);
             bridgeController.gameObject.SetActive(true);
