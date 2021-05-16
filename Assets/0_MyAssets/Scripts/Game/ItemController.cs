@@ -8,17 +8,16 @@ using DG.Tweening;
 public class ItemController : MonoBehaviour
 {
     [NonSerialized] public Character owner;
+    [NonSerialized] public bool isInBucket;
     public bool isAnswer;
     Rigidbody rb;
     Collider col;
-
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
     }
-
 
     public void OnOwned()
     {

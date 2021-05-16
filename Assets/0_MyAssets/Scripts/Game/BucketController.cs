@@ -7,6 +7,7 @@ public class BucketController : MonoBehaviour
 {
     [SerializeField] BucketCollision bucketCollision;
     [SerializeField] TextMeshPro textMeshPro;
+    [SerializeField] BridgeController bridgeController;
     public CharacterType characterType;
     int answerCount
     {
@@ -34,6 +35,14 @@ public class BucketController : MonoBehaviour
 
     void OnHitItem(ItemController itemController)
     {
+        if (itemController.isInBucket) return;
+        itemController.isInBucket = true;
+        itemController.transform.parent = transform;
         if (itemController.isAnswer) answerCount++;
+        if (answerCount == 5)
+        {
+            gameObject.SetActive(false);
+            bridgeController.gameObject.SetActive(true);
+        }
     }
 }
