@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] bool isPlayer;
     [SerializeField] Animator animator;
+    [SerializeField] Transform cartTf;
     public Player player;
     public NPC nPC;
     float walkSpeed = 10f;
@@ -33,6 +34,7 @@ public class Character : MonoBehaviour
     void Start()
     {
         onStart();
+        cartTf.parent = null;
     }
 
 
@@ -53,6 +55,23 @@ public class Character : MonoBehaviour
         vel.x = direction.normalized.x;
         vel.z = direction.normalized.z;
         rb.velocity = vel * walkSpeed;
-        if (direction.sqrMagnitude > 0.01f) transform.forward = direction;
+
+        if (direction.sqrMagnitude < 0.001f)
+        {
+            rb.angularVelocity = Vector3.zero;
+            return;
+        }
+        float dot = Vector3.Dot(direction.normalized, transform.forward);
+
+        // 左側なら正、右側なら負
+        float angularDirection = Mathf.Sign(Vector3.Cross(transform.forward, direction.normalized).y);
+        if (Mathf.Abs(dot) < 0.99f)
+        {
+            rb.angularVelocity = Vector3.up * 10f * angularDirection;
+        }
+        else
+        {
+            rb.angularVelocity = Vector3.zero;
+        }
     }
 }
