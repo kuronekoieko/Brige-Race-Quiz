@@ -3,15 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+public enum CharacterType
+{
+    Blue,
+    Red,
+    Green,
+    Yellow,
+}
+
 public class Character : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
-    [SerializeField] bool isPlayer;
     [SerializeField] Animator animator;
     [SerializeField] Transform cartTf;
     [SerializeField] Transform itemPosTf;
     public Player player;
     public NPC nPC;
+    [SerializeField] bool isPlayer;
+    public CharacterType characterType;
     float walkSpeed = 10f;
     public UnityAction onStart = () => { };
     public UnityAction onUpdate = () => { };

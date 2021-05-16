@@ -4,11 +4,14 @@ using UnityEngine;
 using System;
 using DG.Tweening;
 
+
 public class ItemController : MonoBehaviour
 {
     [NonSerialized] public Character owner;
+    public bool isAnswer;
     Rigidbody rb;
     Collider col;
+
 
     private void Awake()
     {
